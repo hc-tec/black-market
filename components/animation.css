@@ -1,0 +1,173 @@
+	.animate-ball {
+		animation: ball 2s forwards;
+		opacity: 0;
+	}
+	@keyframes ball {
+		0% {
+			opacity: 0;
+			border-radius: 50%;
+			overflow: hidden;
+			transform: translateY(-100%) scale(.1);
+		}
+		75% {
+			opacity: .6;
+			border-radius: 50%;
+			overflow: hidden;
+			transform: translateY(0) scale(.1);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	
+	.animate-stretch {
+		animation: stretch 2s forwards;
+		opacity: 0;
+	}
+	@keyframes stretch {
+		0% {
+			opacity: 0;
+			border-radius: 50%;
+			overflow: hidden;
+			transform: translateY(-100%) scale(.1);
+		}
+		50% {
+			opacity: .6;
+			border-radius: 50%;
+			overflow: hidden;
+			transform: translateY(0) scale(.1);
+		}
+		75% {
+			opacity: .6;
+			transform: scale(.1, 1);
+			/* border-radius: 0; */
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.animate-fly {
+		opacity: 0;
+		transform-style: preserve-3d;
+		perspective: 1300px;
+		transform-origin: 50% 50% -300px;
+		transform: rotateX(-180deg);
+		animation: fly .8s ease-in-out forwards;
+	}
+
+	@keyframes fly {
+		0% { 
+		}
+		100% { 
+			transform: rotateX(0deg); 
+			opacity: 1; 
+		}
+	}
+
+
+	.animate-move-in {
+		animation: move-in 1s forwards;
+		opacity: 0;
+	}
+
+	@keyframes move-in {
+		from {
+			opacity: 0;
+			transform: translate(-20px, -20px);
+		} to {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+	
+	.animate-move-left {
+		animation: move-left 1s forwards;
+		opacity: 0;
+	}
+	
+	@keyframes move-left {
+		from {
+			opacity: 0;
+			transform: translate(-20px, 0);
+		} to {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+	
+	.animate-move-bottom {
+		animation: move-bottom 1s forwards;
+		opacity: 0;
+	}
+	
+	@keyframes move-bottom {
+		from {
+			opacity: 0;
+			transform: translateY(50px);
+		} to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	.animate-blur {
+		animation: blur-loading .7s 1s ease forwards;
+		filter: blur(10px);
+	}
+	
+	@keyframes blur-loading {
+		from {
+			filter: blur(10px);
+		}
+		to {
+			filter: none;
+		}
+	}
+	
+	.animate-slide-up {
+		position: relative;
+		top: 1000px;
+		animation: slide-up .4s cubic-bezier(0.07, 0.65, 0, 0.96) forwards;
+	}
+	
+	
+	@keyframes slide-up {
+	  from { top:1000px; }
+	  to { top:0px; }
+	}
+	
+	.animate-wave {
+		position: relative;
+		top: 1000px;
+		animation: wave .8s cubic-bezier(0.43, 1.6, 0.57, 0.88) forwards;
+	}
+	
+	@keyframes wave {
+	  from { top:1000px; }
+	  to { top:0px; }
+	}
+	
+	.animate-scale-up {
+		transform: scale(0);
+		animation: scale-up .3s cubic-bezier(0.42, 2.12, 0.35, 0.55) forwards;
+	}
+	
+	@keyframes scale-up {
+	  from { transform: scale(0); }
+	  to { transform: scale(1); }
+	}
+	
+	.animate-drop-in {
+		opacity: 0;
+		transform: scale(2);
+		animation: drop-in .5s cubic-bezier(0.43, 1.6, 0.57, 0.88) forwards;
+	}
+	
+	@keyframes drop-in {
+	  from { transform: scale(2); }
+	  to { transform: scale(1); opacity: 1; }
+	}
+
